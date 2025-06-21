@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
@@ -29,68 +30,58 @@ export default function Contact() {
 
   const validateForm = () => {
     const newErrors = {};
-    
+
     if (!formData.fname.trim()) newErrors.fname = 'First name is required';
     if (!formData.lname.trim()) newErrors.lname = 'Last name is required';
-    
+
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email';
     }
-    
+
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!/^[0-9]{10,15}$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number (10-15 digits)';
     }
-    
+
     if (!formData.message.trim()) newErrors.message = 'Message is required';
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       toast.error('Please fix the errors in the form');
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
-      const form = e.target;
-      const formDataToSend = new FormData(form);
-      
-      // Remove the _next parameter since we're not redirecting
-      formDataToSend.delete('_next');
-      
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formDataToSend,
-        headers: {
-          'Accept': 'application/json'
-        }
+      await emailjs.sendForm(
+        'service_3meju6n',  
+        'template_z4gatoa',  
+        e.target,
+        'hAqCBo8gnQZIvvWso'    
+      );
+
+      toast.success('Message sent successfully!');
+      setFormData({
+        fname: '',
+        lname: '',
+        email: '',
+        phone: '',
+        message: ''
       });
-      
-      if (response.ok) {
-        toast.success('Thank you for your message! I will get back to you soon.');
-        // Reset form
-        setFormData({
-          fname: '',
-          lname: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      } else {
-        throw new Error('Form submission failed');
-      }
     } catch (error) {
-      toast.error('There was an error submitting your message. Please try again later.');
+      toast.error('Failed to send message. Please try again.');
+      console.error('EmailJS Error:', error);
     } finally {
       setIsSubmitting(false);
     }
@@ -98,7 +89,7 @@ export default function Contact() {
 
   return (
     <div className="contact-us-section">
-      <ToastContainer 
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -125,7 +116,7 @@ export default function Contact() {
                   Let's build your next <span>project together</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.4s">
-                  Have an idea or need a dedicated Front-End Developer? 
+                  Have an idea or need a dedicated Front-End Developer?
                   Reach out and let's discuss how I can help you bring your vision to life.
                 </p>
               </div>
@@ -170,8 +161,8 @@ export default function Contact() {
 
                 <div className="view-resume-circle">
                   <a
-                    href="/pdf/Rishabh_Resume.pdf" 
-                    target="_blank" 
+                    href="/pdf/Rishabh_Resume.pdf"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src="/images/view-resume-circle.png" alt="View Resume" />
@@ -189,76 +180,75 @@ export default function Contact() {
               </p>
 
               <form 
-                action="https://formsubmit.co/rishabhchandralal15@gmail.com" 
                 method="POST"
                 onSubmit={handleSubmit}
-                className="wow fadeInUp" 
+                className="wow fadeInUp"
                 data-wow-delay="0.2s"
               >
                 {/* FormSubmit configuration */}
                 <input type="hidden" name="_subject" value="New Contact Form Submission!" />
-                <input type="text" name="_honey" style={{display: 'none'}} />
+                <input type="text" name="_honey" style={{ display: 'none' }} />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
 
                 <div className="row">
                   <div className="form-group col-md-6 mb-4">
-                    <input 
-                      type="text" 
-                      name="fname" 
-                      className={`form-control ${errors.fname ? 'is-invalid' : ''}`} 
-                      placeholder="First Name" 
+                    <input
+                      type="text"
+                      name="fname"
+                      className={`form-control ${errors.fname ? 'is-invalid' : ''}`}
+                      placeholder="First Name"
                       value={formData.fname}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                     {errors.fname && <div className="invalid-feedback">{errors.fname}</div>}
                   </div>
 
                   <div className="form-group col-md-6 mb-4">
-                    <input 
-                      type="text" 
-                      name="lname" 
-                      className={`form-control ${errors.lname ? 'is-invalid' : ''}`} 
-                      placeholder="Last Name" 
+                    <input
+                      type="text"
+                      name="lname"
+                      className={`form-control ${errors.lname ? 'is-invalid' : ''}`}
+                      placeholder="Last Name"
                       value={formData.lname}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                     {errors.lname && <div className="invalid-feedback">{errors.lname}</div>}
                   </div>
 
                   <div className="form-group col-md-6 mb-4">
-                    <input 
-                      type="email" 
-                      name="email" 
-                      className={`form-control ${errors.email ? 'is-invalid' : ''}`} 
-                      placeholder="Your Email" 
+                    <input
+                      type="email"
+                      name="email"
+                      className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                      placeholder="Your Email"
                       value={formData.email}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                     {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                   </div>
 
                   <div className="form-group col-md-6 mb-4">
-                    <input 
-                      type="tel" 
-                      name="phone" 
-                      className={`form-control ${errors.phone ? 'is-invalid' : ''}`} 
-                      placeholder="Your Phone Number" 
+                    <input
+                      type="tel"
+                      name="phone"
+                      className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                      placeholder="Your Phone Number"
                       value={formData.phone}
                       onChange={handleChange}
-                      required 
+                      required
                     />
                     {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
                   </div>
 
                   <div className="form-group col-md-12 mb-4">
-                    <textarea 
-                      name="message" 
-                      className={`form-control ${errors.message ? 'is-invalid' : ''}`} 
-                      rows="4" 
+                    <textarea
+                      name="message"
+                      className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+                      rows="4"
                       placeholder="Your Message"
                       value={formData.message}
                       onChange={handleChange}
@@ -268,8 +258,8 @@ export default function Contact() {
                   </div>
 
                   <div className="col-md-12">
-                    <button 
-                      type="submit" 
+                    <button
+                      type="submit"
                       className="btn-default"
                       disabled={isSubmitting}
                     >
