@@ -6573,3 +6573,60 @@ header.main-header .header-sticky.active{
 		height: 350px;
 	}
 }
+
+/* Thank You Modal Styles */
+.thank-you-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	max-width: 500px;
+	width: 90%;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	outline: none;
+  }
+  
+  .thank-you-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+  }
+  
+  .thank-you-content h2 {
+	color: #2c3e50;
+	margin-bottom: 1rem;
+  }
+  
+  .thank-you-content h2 span {
+	display: inline-block;
+	margin-left: 10px;
+  }
+  
+  .thank-you-content p {
+	color: #555;
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+  }
+  
+  .thank-you-content button {
+	background: #3498db;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background 0.3s ease;
+  }
+  
+  .thank-you-content button:hover {
+	background: #2980b9;
+  }
