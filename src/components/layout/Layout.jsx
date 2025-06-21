@@ -11,23 +11,19 @@ import About from '../pages/About';
 import HomeSection4 from '../pages/HomeSection4';
 import HomeSection5 from '../pages/HomeSection5';
 import HomeSection6 from '../pages/HomeSection6';
-import HomeSection7 from '../pages/HomeSection7';
-import HomeSection8 from '../pages/HomeSection8';
 
 const Layout = () => (
   <>
     <PreLoader />
     <Header />
     <HeroSection />
-    <About />
     <HomeSection1 />
-    <HomeSection2 />
+    <About />
     <HomeSection3 />
+    <HomeSection2 />
     <HomeSection4 />
     <HomeSection5 />
     <HomeSection6 />
-    <HomeSection7 />
-    <HomeSection8 />
     <Contact />
     <Footer />
   </>

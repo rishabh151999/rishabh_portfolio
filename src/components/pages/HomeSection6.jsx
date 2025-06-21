@@ -2,21 +2,22 @@ import React from 'react';
 
 export default function HomeSection6() {
   const education = [
-    { school: 'Harmony Institute', degree: 'Master in Visual Arts', year: '2012 - 2014' },
-    { school: 'Aurora Academy', degree: 'Bachelor in Visual Arts', year: '2008 - 2012' },
-    { school: 'Crystalbrook', degree: 'High School', year: '1996 - 2008' },
+    { school: 'Chandigarh University', degree: 'Master of Computer Applications', year: '2022 – 2024' },
+    { school: 'University of Lucknow', degree: 'Bachelor of Science', year: '2018 – 2021' },
+    { school: 'Riverside Academy College', degree: 'Intermediate', year: '2017 – 2018' },
+    { school: 'St. John Bosco College', degree: 'High School', year: '2015 – 2016' },
   ];
 
   const workExperience = [
-    { company: 'Insightlancer', role: 'Senior Designer', year: '2018 - 2024' },
-    { company: 'Self-employed', role: 'Visual Artist', year: '2016 - 2018' },
-    { company: 'KG Graphics Studio', role: 'Web Designer', year: '2014 - 2016' },
+    { company: 'Aayan Infotech', role: 'Front-End Developer | React JS', year: 'Feb 2025 – Ongoing' },
+    { company: 'Bito Technologies Pvt. Ltd.', role: 'Web Developer', year: 'Jul 2024 – Jan 2025' },
+    { company: 'CodSoft Pvt. Ltd.', role: 'Web Developer Intern', year: 'Apr 2024 – May 2024' },
   ];
 
   const steps = [
     {
       title: '1. Discovery and Planning',
-      desc: 'We begin by understanding your vision, goal & requirement. Through collaborative discussions and research.',
+      desc: 'Understand your business requirements, goals, and audience to plan a robust architecture and development strategy.',
       id: 'workcollapse1',
       target: '#workcollapse1',
       expanded: true,
@@ -24,7 +25,7 @@ export default function HomeSection6() {
     },
     {
       title: '2. Design and Development',
-      desc: 'We begin by understanding your vision, goal & requirement. Through collaborative discussions and research.',
+      desc: 'Transform ideas into responsive, high-performance web interfaces with ReactJS, ensuring maintainable and scalable code.',
       id: 'workcollapse2',
       target: '#workcollapse2',
       expanded: false,
@@ -32,7 +33,7 @@ export default function HomeSection6() {
     },
     {
       title: '3. Delivery and Support',
-      desc: 'We begin by understanding your vision, goal & requirement. Through collaborative discussions and research.',
+      desc: 'Deploy, test, and provide post-launch support, ensuring smooth handover, training, and future enhancements as needed.',
       id: 'workcollapse3',
       target: '#workcollapse3',
       expanded: false,
@@ -47,9 +48,9 @@ export default function HomeSection6() {
           <div className="row section-row">
             <div className="col-lg-12">
               <div className="section-title section-title-center">
-                <h3 className="wow fadeInUp">Education & work</h3>
+                <h3 className="wow fadeInUp">Education & Work</h3>
                 <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                  Foundation and growth: my <span>education & work</span>
+                  My journey of learning and <span>professional growth</span>
                 </h2>
               </div>
             </div>
@@ -58,13 +59,13 @@ export default function HomeSection6() {
           <div className="row">
             {[
               { title: 'Education', icon: 'icon-foundation-header-1.svg', data: education },
-              { title: 'Work experience', icon: 'icon-foundation-header-2.svg', data: workExperience },
+              { title: 'Work Experience', icon: 'icon-foundation-header-2.svg', data: workExperience },
             ].map((section, i) => (
               <div className="col-lg-6" key={i}>
                 <div className="our-foundation-box wow fadeInUp" data-wow-delay={i ? '0.2s' : '0s'}>
                   <div className="foundation-header">
                     <div className="icon-box">
-                      <img src={`images/${section.icon}`} alt="" />
+                      <img src={`images/${section.icon}`} alt={section.title} />
                     </div>
                     <div className="foundation-header-title">
                       <h3>{section.title}</h3>
@@ -96,21 +97,25 @@ export default function HomeSection6() {
             <div className="col-lg-6">
               <div className="how-it-work-image">
                 <figure className="image-anime reveal">
-                  <img src="images/how-it-work-image.jpg" alt="" />
+                  <img
+                    src="https://img.freepik.com/free-photo/photographer-using-laptop_23-2148019151.jpg?ga=GA1.1.798502561.1733972320&semt=ais_hybrid&w=740"
+                    alt="Agile development workflow"
+                  />
                 </figure>
               </div>
+
             </div>
 
             <div className="col-lg-6">
               <div className="how-it-work-content">
                 <div className="section-title">
-                  <h3 className="wow fadeInUp">How it work</h3>
+                  <h3 className="wow fadeInUp">How I Work</h3>
                   <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                    the structured workflow behind <span>our success</span>
+                    A clear process for <span>efficient delivery</span>
                   </h2>
                   <p className="wow fadeInUp" data-wow-delay="0.4s">
-                    Hi, I'm James, a passionate <a href="service-single.html">UI/UX designer</a> who thrives on turning ideas into
-                    visually stunning realities. With a love for creativity and a meticulous eye for detail.
+                    Hi, I'm Rishabh — a dedicated Front-End Developer skilled in ReactJS,
+                    committed to transforming ideas into robust, responsive, and user-friendly web applications.
                   </p>
                 </div>
 
@@ -142,6 +147,7 @@ export default function HomeSection6() {
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>

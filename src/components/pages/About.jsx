@@ -10,9 +10,10 @@ export default function About() {
           {/* Left Column - About Image */}
           <div className="col-lg-6">
             <div className="about-us-img">
-              <figure>
-                <img src="/images/about-us-img.png" alt="About Us" />
-              </figure>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                alt="React Logo"
+              />
             </div>
           </div>
 
@@ -22,16 +23,16 @@ export default function About() {
 
               {/* Section Title */}
               <div className="section-title">
-                <h3 className="wow fadeInUp">about us</h3>
+                <h3 className="wow fadeInUp">about me</h3>
                 <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                  Who is <span>james scott?</span>
+                This Is <span>Rishabh Chandra</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.4s">
-                  <span>“Helping businesses grow with creative web design and development solutions.</span>
+                  <span>“Creating seamless, engaging web experiences through clean and modern code.”</span>
                 </p>
                 <p className="wow fadeInUp" data-wow-delay="0.6s">
-                  Hi, I'm James, a passionate <a href="#">UI/UX designer</a> who thrives on turning ideas into visually stunning realities.
-                  With a love for creativity and a meticulous eye for detail.
+                  Hi, I'm Rishabh Chandra — a passionate <a href="#">Front-End Developer</a> specializing in ReactJS.
+                  I love transforming ideas into responsive, user-friendly interfaces that help businesses thrive online.
                 </p>
               </div>
 
@@ -45,8 +46,8 @@ export default function About() {
                       <img src="/images/icon-mail.svg" alt="Email Icon" />
                     </div>
                     <div className="about-contact-item-content">
-                      <p>Email Us At</p>
-                      <h3><a href="mailto:Info@domain.com">Info@domain.com</a></h3>
+                      <p>Email Me At</p>
+                      <h3><a href="mailto:rishabhchandraofficial@gmail.com">rishabhchandralal15@gmail.com</a></h3>
                     </div>
                   </div>
 
@@ -56,22 +57,30 @@ export default function About() {
                     </div>
                     <div className="about-contact-item-content">
                       <p>Phone Number</p>
-                      <h3><a href="tel:123456789">+0 123 456 789</a></h3>
+                      <h3><a href="tel:9795661093">+91 9795661093</a></h3>
                     </div>
                   </div>
                 </div>
 
                 {/* Experience Box */}
-                <div className="about-experience-box">
-                  <div className="about-experience-counter">
-                    <h2><span className="counter">12</span>+</h2>
+                <div className="">
+                  {/* <div className="about-experience-counter">
+                    <h2><span className="counter">2</span>+</h2>
                     <p>years experience</p>
-                  </div>
+                  </div> */}
+
                   <p>
-                    <Link to="/contact">My Resume</Link>{' '}
+                    <a
+                      href="/pdf/Rishabh_Resume.pdf"
+                      className="btn-default"
+                      download
+                    >
+                      Download My Resume
+                    </a>{' '}
                     <img src="/images/star-icon-gradient.svg" alt="Star" />
                   </p>
                 </div>
+
 
               </div>
             </div>

@@ -240,7 +240,7 @@ body{
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    visibility: hidden;
+    /* visibility: hidden; */
     overflow: hidden;
 }
 
@@ -467,7 +467,7 @@ body{
 }
 
 .section-title h1{
-	font-size: 72px;
+	font-size: 50px;
 	margin-bottom: 0;
 	cursor: none;
 }
@@ -819,7 +819,7 @@ header.main-header .header-sticky.active{
 
 .hero{
 	position: relative; 
-	padding: 100px 0 0;
+	padding: 60px 0 0;
 	z-index: 1;
 }
 
@@ -988,8 +988,8 @@ header.main-header .header-sticky.active{
 
 .hero-img img{
 	width: 100%;
-	aspect-ratio: 1 / 1.2082;
-    object-fit: contain;
+	/* aspect-ratio: 1 / 1.2082; */
+    /* object-fit: contain; */
 }
 
 .customer-image-box{
@@ -1209,7 +1209,7 @@ header.main-header .header-sticky.active{
 
 .our-specialization{
 	position: relative;
-	padding: 180px 0 90px;
+	padding: 20px 0 20px;
 	z-index: 1;
 }
 
@@ -1479,7 +1479,7 @@ header.main-header .header-sticky.active{
 
 .our-facts{
 	position: relative;
-	padding: 90px 0;
+	padding: 45px 0 45px;
 	z-index: 1;
 }
 
@@ -1577,7 +1577,7 @@ header.main-header .header-sticky.active{
 
 .our-tools{
 	position: relative;
-	padding: 90px 0 60px;
+	padding: 50px 0 50px;
 	z-index: 1;
 }
 
@@ -1645,7 +1645,7 @@ header.main-header .header-sticky.active{
 
 .our-portfolio{
 	position: relative;
-	padding: 90px 0;
+	padding: 40px 0 40px;
 	z-index: 1;
 }
 
@@ -1741,7 +1741,7 @@ header.main-header .header-sticky.active{
 
 .our-foundation{
 	position: relative;
-	padding: 90px 0 60px;
+	padding: 40px 0 40px;
 	z-index: 1;
 }
 
@@ -1831,7 +1831,7 @@ header.main-header .header-sticky.active{
 }
 
 .foundation-content-year{
-	width: calc(30% - 10px);
+	width: calc(41% - 10px);
 	text-align: end;
 }
 
@@ -1852,7 +1852,7 @@ header.main-header .header-sticky.active{
 
 .how-it-work{
 	position: relative;
-	padding: 90px 0;
+	padding: 40px 0 40px;
 	z-index: 1;
 }
 
@@ -2442,7 +2442,7 @@ header.main-header .header-sticky.active{
 
 .contact-us-section{
 	position: relative;
-	padding: 90px 0;
+	padding: 40px 0 40px;
 	z-index: 1;
 }
 
@@ -2554,7 +2554,7 @@ header.main-header .header-sticky.active{
 .main-footer{
 	position: relative;
 	background: linear-gradient(254.54deg, var(--accent-color) 0.03%, var(--accent-secondary-color) 100%);
-	padding: 80px 0 0;
+	padding: 40px 0 0;
 	z-index: 1;
 }
 
@@ -2564,11 +2564,11 @@ header.main-header .header-sticky.active{
 	justify-content: space-between;
 	border-bottom: 1px solid var(--dark-divider-color);
 	margin-bottom: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 10px;
 }
 
 .footer-title h2{
-	font-size: 70px;
+	font-size: 50px;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: var(--black-color);
@@ -4861,7 +4861,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-specialization{
-		padding: 90px 0 45px;
+		padding: 20px 0 20px;
 	}
 
 	.service-item{
@@ -4935,7 +4935,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-facts{
-		padding: 45px 0;
+		padding: 20px 0 20px;
 	}
 
 	.our-facts-box{
@@ -4970,7 +4970,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-tools{
-		padding: 45px 0 15px;
+		padding: 20px 0 20px;
 	}
 
 	.tool-item{
@@ -4999,7 +4999,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-portfolio{
-		padding: 45px 0;
+		padding: 20px 0 20px;
 	}
 
 	.portfolio-image{
@@ -5025,7 +5025,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.our-foundation{
-		padding: 45px 0 15px;
+		padding: 20px 0 20px;
 	}
 
 	.our-foundation-box{
@@ -5057,7 +5057,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.how-it-work{
-		padding: 45px 0;
+		padding: 20px 0 20px;
 	}
 
 	.how-it-work-image{
@@ -5216,7 +5216,7 @@ header.main-header .header-sticky.active{
 	}
 
 	.contact-us-section{
-		padding: 45px 0;
+		padding: 20px 0 20px;
 	}
 
 	.contact-us-content{

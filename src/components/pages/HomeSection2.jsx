@@ -14,7 +14,7 @@ export default function HomeSection2() {
             <div className="section-title">
               <h3 className="wow fadeInUp">My Specialization</h3>
               <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                Innovative best design and <span>development services</span>
+                Front-End <span>Development Expertise</span>
               </h2>
             </div>
           </div>
@@ -22,12 +22,11 @@ export default function HomeSection2() {
             <div className="section-content-btn">
               <div className="section-title-content wow fadeInUp" data-wow-delay="0.4s">
                 <p>
-                  As a skilled Product Designer, I offer a range of services tailored to help you create exceptional
-                  digital products and experiences.
+                  As a dedicated Front-End Developer, I craft modern, responsive, and user-friendly web applications using ReactJS and the latest web technologies.
                 </p>
               </div>
               <div className="section-btn wow fadeInUp" data-wow-delay="0.6s">
-                <Link to="/services" className="btn-default">view all services</Link>
+                <Link to="/services" className="btn-default">View All Services</Link>
               </div>
             </div>
           </div>
@@ -50,31 +49,35 @@ export default function HomeSection2() {
               >
                 {[
                   {
-                    icon: 'icon-services-1.svg',
-                    title: 'Mobile App Design & Development'
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                    title: 'React JS Development'
                   },
                   {
-                    icon: 'icon-services-2.svg',
-                    title: 'UI/UX Design System Creation'
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+                    title: 'Responsive Web Design'
                   },
                   {
-                    icon: 'icon-services-3.svg',
-                    title: 'Branding and Visual Identity'
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+                    title: 'UI/UX Implementation'
                   },
                   {
-                    icon: 'icon-services-4.svg',
-                    title: 'Consultation and Strategy'
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                    title: 'Single Page Applications'
                   },
                   {
-                    icon: 'icon-services-5.svg',
-                    title: 'Video Production Services'
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                    title: 'API Integration'
+                  },
+                  {
+                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
+                    title: 'Performance Optimization'
                   }
                 ].map((service, index) => (
                   <SwiperSlide key={index}>
                     <div className="service-item">
                       <div className="service-item-header">
                         <div className="icon-box">
-                          <img src={`images/${service.icon}`} alt="" />
+                          <img src={`${service.icon}`} alt="" width={40}/>
                         </div>
                         <div className="service-item-btn">
                           <Link to="/service-single">
@@ -95,8 +98,8 @@ export default function HomeSection2() {
           <div className="col-lg-12">
             <div className="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
               <p>
-                Elevate your brand with creative design solutions.{' '}
-                <Link to="/contact">Let's bring your vision to life today!</Link>
+                Let’s build fast, modern, and engaging web experiences together.{' '}
+                <Link to="/contact">Contact me to get started!</Link>
               </p>
             </div>
           </div>

@@ -8,17 +8,19 @@ export default function HomeSection4() {
           <div className="col-lg-12">
             {/* Our Facts Box Start */}
             <div className="our-facts-box">
+
               {/* Our Facts Content Start */}
               <div className="our-facts-content">
+
                 {/* Section Title Start */}
                 <div className="section-title">
-                  <h3 className="wow fadeInUp">My Number Facts</h3>
+                  <h3 className="wow fadeInUp">My Highlights</h3>
                   <h2
                     className="wow fadeInUp"
                     data-wow-delay="0.2s"
                     data-cursor="-opaque"
                   >
-                    Number trivia: what you <span>didn't know</span>
+                    By the numbers: <span>proven results</span>
                   </h2>
                 </div>
                 {/* Section Title End */}
@@ -27,18 +29,19 @@ export default function HomeSection4() {
                 <div className="facts-counter-box">
                   <div className="facts-counter-item">
                     <h2>
-                      +<span className="counter">60</span>%
+                      15<span className="counter">+</span>
                     </h2>
-                    <p>We incorporate eco-friendly solutions in more than half.</p>
+                    <p>Successful client projects delivered</p>
                   </div>
                   <div className="facts-counter-item">
                     <h2>
-                      +<span className="counter">80</span>%
+                      1<span className="counter">+</span> Years
                     </h2>
-                    <p>We specialize in energy-saving installations.</p>
+                    <p>Hands-on professional experience</p>
                   </div>
                 </div>
                 {/* Success Counter Box End */}
+
               </div>
               {/* Our Facts Content End */}
 
@@ -46,22 +49,17 @@ export default function HomeSection4() {
               <div className="our-facts-list">
                 <div className="facts-list-item wow fadeInUp">
                   <p>
-                    <span>Creative Solutions:</span> Contrary to popular belief,
-                    Lorem Ipsum is not simply random text. It has roots in a piece
-                    of classical Latin literature from 45 BC, making it over 2000
-                    years old. Richard McClintock, a Latin professor.
+                    <span>Frontend Excellence:</span> I craft responsive, high-performance interfaces using ReactJS, JavaScript, and modern CSS frameworks — ensuring every project runs smoothly across all devices.
                   </p>
                 </div>
                 <div className="facts-list-item wow fadeInUp" data-wow-delay="0.25s">
                   <p>
-                    <span>E-commerce Solutions:</span> Contrary to popular belief,
-                    Lorem Ipsum is not simply random text. It has roots in a piece
-                    of classical Latin literature from 45 BC, making it over 2000
-                    years old. Richard McClintock, a Latin.
+                    <span>Full Stack Delivery:</span> From APIs with Node.js and Express to scalable data with MongoDB or Firebase, I provide end-to-end solutions tailored to real business needs.
                   </p>
                 </div>
               </div>
               {/* Our Facts List End */}
+
             </div>
             {/* Our Facts Box End */}
           </div>

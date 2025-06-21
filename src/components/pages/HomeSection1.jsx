@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function HomeSection1() {
   return (
@@ -7,13 +6,21 @@ export default function HomeSection1() {
       {/* Scrolling Ticker Section Start */}
       <div className="our-scrolling-ticker">
         <div className="scrolling-ticker-box">
+          {/* Duplicate the WHOLE list ONCE for smooth looping */}
           {[1, 2].map((i) => (
             <div className="scrolling-content" key={i}>
-              {["Website Design", "Mobile App Design", "Wireframe Design", "Dashboard Design", "Product Design"].map((label, index) => (
-                <React.Fragment key={index}>
-                  <span><img src="/images/star-icon.svg" alt="Star" />{label}</span>
-                  <span><img src="/images/star-icon.svg" alt="Star" />{label}</span>
-                </React.Fragment>
+              {[
+                "React JS Development",
+                "Responsive Web Design",
+                "UI/UX Implementation",
+                "Single Page Applications",
+                "Front-End Optimization",
+                "Cross-Browser Compatibility",
+                "API Integration"
+              ].map((label, index) => (
+                <span key={index}>
+                  <img src="/images/star-icon.svg" alt="Star" /> {label}
+                </span>
               ))}
             </div>
           ))}

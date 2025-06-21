@@ -11,26 +11,31 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-us-content">
               <div className="section-title">
-                <h3 className="wow fadeInUp">contact us</h3>
-                <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                  Get in touch to discuss your <span>next project</span>
+                <h3 className="wow fadeInUp">Let's Connect</h3>
+                <h2
+                  className="wow fadeInUp"
+                  data-wow-delay="0.2s"
+                  data-cursor="-opaque"
+                >
+                  Let’s build your next <span>project together</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.4s">
-                  Are you ready to take your project to the next level? Whether you're looking for a new website,
-                  a web application, or simply need advice.
+                  Have an idea or need a dedicated Front-End Developer? 
+                  Reach out and let’s discuss how I can help you bring your vision to life.
                 </p>
               </div>
 
               <div className="contact-us-body">
                 <div className="contact-info-list">
+
                   {/* Address */}
                   <div className="contact-info-item wow fadeInUp" data-wow-delay="0.6s">
                     <div className="icon-box">
                       <img src="/images/icon-location-black.svg" alt="Location Icon" />
                     </div>
                     <div className="contact-info-content">
-                      <h3>Address</h3>
-                      <p>2972 Westheimer Rd. Santa Ana, New York, USA</p>
+                      <h3>Location</h3>
+                      <p>Lucknow, Uttar Pradesh, India</p>
                     </div>
                   </div>
 
@@ -40,16 +45,33 @@ export default function Contact() {
                       <img src="/images/icon-phone-black.svg" alt="Phone Icon" />
                     </div>
                     <div className="contact-info-content">
-                      <h3>Phone Number</h3>
-                      <p><a href="tel:123456789">+1 (123) 456-789</a></p>
+                      <h3>Phone</h3>
+                      <p><a href="tel:+919795661093">+91 9795661093</a></p>
+                    </div>
+                  </div>
+
+                  {/* Email */}
+                  <div className="contact-info-item wow fadeInUp" data-wow-delay="1s">
+                    <div className="icon-box">
+                      <img src="/images/icon-mail-black.svg" alt="Email Icon" />
+                    </div>
+                    <div className="contact-info-content">
+                      <h3>Email</h3>
+                      <p>
+                        <a href="mailto:rishabhchandralal15@gmail.com">rishabhchandralal15@gmail.com</a>
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="view-resume-circle">
-                  <Link to="/contact">
+                  <a
+                    href="/pdf/Rishabh_Resume.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
                     <img src="/images/view-resume-circle.png" alt="View Resume" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -59,8 +81,7 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-form">
               <p className="wow fadeInUp">
-                Fill out the form below to connect with me. I'll get back to you soon to
-                discuss your project or answer any questions.
+                Fill out this form and I’ll get back to you promptly. I’m excited to discuss your ideas and how I can help!
               </p>
 
               <form id="contactForm" method="POST" className="wow fadeInUp" data-wow-delay="0.2s">
@@ -74,19 +95,19 @@ export default function Contact() {
                   </div>
 
                   <div className="form-group col-md-6 mb-4">
-                    <input type="email" name="email" className="form-control" placeholder="Email" required />
+                    <input type="email" name="email" className="form-control" placeholder="Your Email" required />
                   </div>
 
                   <div className="form-group col-md-6 mb-4">
-                    <input type="text" name="phone" className="form-control" placeholder="Phone Number" required />
+                    <input type="text" name="phone" className="form-control" placeholder="Your Phone Number" required />
                   </div>
 
                   <div className="form-group col-md-12 mb-4">
-                    <textarea name="message" className="form-control" rows="6" placeholder="Message"></textarea>
+                    <textarea name="message" className="form-control" rows="4" placeholder="Your Message"></textarea>
                   </div>
 
                   <div className="col-md-12">
-                    <button type="submit" className="btn-default">submit message</button>
+                    <button type="submit" className="btn-default">Send Message</button>
                     <div id="msgSubmit" className="h3 hidden"></div>
                   </div>
                 </div>

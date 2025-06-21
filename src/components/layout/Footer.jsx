@@ -10,9 +10,10 @@ export default function Footer() {
           <div className="col-lg-12">
             <div className="footer-header">
               <div className="footer-title">
-                <h2>Ready to work with us?</h2>
-                <p>Partner with our design agency for your business with amazing results.</p>
+                <h2>Ready to collaborate?</h2>
+                <p>Let’s turn your ideas into reality with modern, responsive web solutions.</p>
               </div>
+
               <div className="footer-get-started-circle">
                 <Link to="/contact">
                   <img src="/images/get-started-circle-dark.png" alt="Get Started" />
@@ -29,67 +30,70 @@ export default function Footer() {
               </div>
               <div className="about-footer-content">
                 <p>
-                  Crafting intuitive, user-centric designs that bring ideas to life. With a passion
-                  for innovation and creativity, I help businesses and individuals.
+                  Building clean, responsive, and dynamic web applications with a focus on performance and user experience. Let’s turn your ideas into reality with modern, efficient front-end solutions.
                 </p>
               </div>
               <div className="footer-social-links">
                 <ul>
-                  <li><a href="#"><i className="fa-brands fa-dribbble"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="tel:+919795661093"><i className="fa-solid fa-phone"></i></a></li>
+                  <li><a href="mailto:rishabhchandralal15@gmail.com"><i className="fa-solid fa-envelope"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/rishabhchandralal/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://github.com/rishabh151999" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a></li>
+                  <li><a href="https://www.instagram.com/rishabh_chandra_15" target="_blank" rel="noreferrer"><i className="fa-brands fa-instagram"></i></a></li>
                 </ul>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="col-lg-2 col-md-3">
-            <div className="footer-links">
-              <h3>quick links</h3>
-              <ul>
-                <li><Link to="/">home</Link></li>
-                <li><Link to="/about">about us</Link></li>
-                <li><Link to="/services">services</Link></li>
-                <li><Link to="/portfolio">portfolio</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Our Services */}
-          <div className="col-lg-3 col-md-5">
-            <div className="footer-links">
-              <h3>Our Services</h3>
-              <ul>
-                <li><Link to="/service-single">Mobile App Design</Link></li>
-                <li><Link to="/service-single">UI/UX Design</Link></li>
-                <li><Link to="/service-single">Branding and Visual Identity</Link></li>
-                <li><Link to="/service-single">Consultation and Strategy</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* View My Work */}
+          {/* Quick Links */}
           <div className="col-lg-2 col-md-4">
             <div className="footer-links">
-              <h3>View My Work</h3>
+              <h3>Quick Links</h3>
               <ul>
-                <li><a href="#">Behance</a></li>
-                <li><a href="#">Dribbble</a></li>
-                <li><a href="#">Upwork</a></li>
-                <li><a href="#">Fiverr</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div className="col-lg-3 col-md-4">
+            <div className="footer-links">
+              <h3>Services</h3>
+              <ul>
+                <li><Link to="/services">Front-End Development</Link></li>
+                <li><Link to="/services">React JS Development</Link></li>
+                <li><Link to="/services">Responsive Web Design</Link></li>
+                <li><Link to="/services">API Integration</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Profiles */}
+          <div className="col-lg-2 col-md-4">
+            <div className="footer-links">
+              <h3>Profiles</h3>
+              <ul>
+                <li><a href="https://github.com/rishabh151999" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/rishabhchandralal/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:rishabhchandralal15@gmail.com">Email</a></li>
+                <li><a href="tel:+919795661093">Call Me</a></li>
               </ul>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="col-lg-12">
-            <div className="footer-copyright-text">
-              <p>Copyright © 2025 All Rights Reserved.</p>
+            <div className="footer-copyright-text d-flex justify-content-between flex-column flex-md-row">
+              <p>© {new Date().getFullYear()} All rights reserved.</p>
+              <p>
+                Designed & Developed by <a href="https://www.linkedin.com/in/rishabhchandralal/" target="_blank" rel="noreferrer" className='text-dark'>Rishabh</a>
+              </p>
             </div>
           </div>
-
         </div>
       </div>
     </footer>
