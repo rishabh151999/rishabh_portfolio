@@ -1,66 +1,149 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
+  // Function to close the navbar when a link is clicked
+  const closeNavbar = () => {
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse.classList.contains('show')) {
+      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+  };
+
   return (
     <header className="main-header">
       <div className="header-sticky">
         <nav className="navbar navbar-expand-lg">
           <div className="container">
-            {/* Logo Start */}
-            <Link className="navbar-brand" to="/">
-              <img src="/images/logo.svg" alt="Logo" />
-            </Link>
-            {/* Logo End */}
 
-            {/* Main Menu Start */}
-            <div className="collapse navbar-collapse main-menu">
+            {/* Logo */}
+            <ScrollLink 
+              to="home" 
+              smooth={true} 
+              duration={500} 
+              className="navbar-brand" 
+              style={{ cursor: 'pointer' }}
+              onClick={closeNavbar}
+            >
+              <img src="/images/Rishabh (1).png" alt="Logo" className='header-img-all' style={{ maxWidth: '170px' }}/>
+            </ScrollLink>
+
+            {/* Bootstrap Toggler Button */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {/* Main Menu */}
+            <div className="collapse navbar-collapse main-menu" id="navbarNav">
               <div className="nav-menu-wrapper">
-                <ul className="navbar-nav mr-auto" id="menu">
-                  <li className="nav-item submenu">
-                    <Link className="nav-link" to="/">Home</Link>
-                    <ul>
-                      <li className="nav-item"><Link className="nav-link" to="/index">Home - Main</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/index-image">Home - Image</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/index-video">Home - Video</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/index-slider">Home - Slider</Link></li>
-                    </ul>
+                <ul className="navbar-nav ms-auto">
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="home" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Home
+                    </ScrollLink>
                   </li>
-                  <li className="nav-item"><Link className="nav-link" to="/about">About Us</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/services">Services</Link></li>
-                  <li className="nav-item"><Link className="nav-link" to="/blog">Blog</Link></li>
-                  <li className="nav-item submenu">
-                    <Link className="nav-link" to="#">Pages</Link>
-                    <ul>
-                      <li className="nav-item"><Link className="nav-link" to="/service-single">Service Details</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/blog-single">Blog Details</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/portfolio">Portfolio</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/portfolio-single">Portfolio details</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/team">Our Team</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/team-single">Team Details</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/pricing">Pricing Plan</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/testimonials">Testimonials</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/image-gallery">Image Gallery</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/video-gallery">Video Gallery</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/faqs">FAQs</Link></li>
-                      <li className="nav-item"><Link className="nav-link" to="/404">404</Link></li>
-                    </ul>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="about" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      About
+                    </ScrollLink>
                   </li>
-                  <li className="nav-item"><Link className="nav-link" to="/contact">Contact Us</Link></li>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="skills" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Skills
+                    </ScrollLink>
+                  </li>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="services" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Services
+                    </ScrollLink>
+                  </li>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="projects" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Projects
+                    </ScrollLink>
+                  </li>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="experience" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Experience
+                    </ScrollLink>
+                  </li>
+                  <li className="nav-item">
+                    <ScrollLink 
+                      to="contact" 
+                      smooth={true} 
+                      duration={500} 
+                      className="nav-link"
+                      onClick={closeNavbar}
+                    >
+                      Contact
+                    </ScrollLink>
+                  </li>
                 </ul>
               </div>
 
-              {/* Header Btn Start */}
-              <div className="header-btn d-inline-flex">
-                <Link to="/contact" className="btn-default">Download CV</Link>
+              {/* Download CV button */}
+              <div className="header-btn d-inline-flex ms-lg-3">
+                <a 
+                  href="/pdf/Rishabh_Resume.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-default"
+                  onClick={closeNavbar}
+                >
+                  Download CV
+                </a>
               </div>
-              {/* Header Btn End */}
             </div>
-            {/* Main Menu End */}
-            <div className="navbar-toggle"></div>
+
           </div>
         </nav>
-        <div className="responsive-menu"></div>
       </div>
     </header>
   );

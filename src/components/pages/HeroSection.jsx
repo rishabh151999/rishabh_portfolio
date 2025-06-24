@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function HeroSection() {
   return (
@@ -23,7 +23,14 @@ export default function HeroSection() {
 
               <div className="hero-body wow fadeInUp" data-wow-delay="0.6s">
                 <div className="hero-btn">
-                  <Link to="/contact" className="btn-default">Let's Connect</Link>
+                  <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    className="btn-default"
+                  >
+                    Let's Connect
+                  </ScrollLink>
                 </div>
 
                 {/* <div className="video-play-button">
@@ -46,17 +53,25 @@ export default function HeroSection() {
               {/* Customer Experience Box */}
               <div className="customer-image-box">
                 <div className="customer-image-content">
-                  <h3>Trusted By Clients</h3>
+                  <h3>Delivered Projects for 10+ Clients</h3>
                 </div>
 
                 <div className="customer-experience-images">
-                  {['1', '2', '3', '4', '5'].map((num) => (
-                    <div className="customer-image" key={num}>
+                  {[
+                    'https://images.unsplash.com/photo-1551836022-d5d88e9218df?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200',
+                    'https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200',
+                    'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200',
+                    'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200',
+                    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200',
+                    'https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=crop&h=200&w=200'
+                  ].map((url, index) => (
+                    <div className="customer-image" key={index}>
                       <figure className="image-anime">
-                        <img src={`/images/customer-img-${num}.jpg`} alt={`Client ${num}`} />
+                        <img src={url} alt={`Client ${index + 1}`} />
                       </figure>
                     </div>
                   ))}
+
 
                   <div className="customer-image add-more">
                     <a href="#"><i className="fa-solid fa-plus"></i></a>

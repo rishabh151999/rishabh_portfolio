@@ -26,7 +26,7 @@ export default function HomeSection2() {
                 </p>
               </div>
               <div className="section-btn wow fadeInUp" data-wow-delay="0.6s">
-                <Link to="/services" className="btn-default">View All Services</Link>
+                <Link to="/services" className="btn-default">My Featured Services</Link>
               </div>
             </div>
           </div>
@@ -80,13 +80,13 @@ export default function HomeSection2() {
                           <img src={`${service.icon}`} alt="" width={40}/>
                         </div>
                         <div className="service-item-btn">
-                          <Link to="/service-single">
+                          <Link to="/">
                             <img src="images/arrow-dark.svg" alt="arrow" />
                           </Link>
                         </div>
                       </div>
                       <div className="service-item-body">
-                        <h3><Link to="/service-single">{service.title}</Link></h3>
+                        <h3><Link to="/">{service.title}</Link></h3>
                       </div>
                     </div>
                   </SwiperSlide>
