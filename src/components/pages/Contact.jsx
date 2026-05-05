@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import emailjs from '@emailjs/browser';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -107,17 +108,17 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-us-content">
               <div className="section-title">
-                <h3 className="wow fadeInUp">Let's Connect</h3>
+                <h3 className="wow fadeInUp">Let&apos;s Connect</h3>
                 <h2
                   className="wow fadeInUp"
                   data-wow-delay="0.2s"
                   data-cursor="-opaque"
                 >
-                  Let's build your next <span>project together</span>
+                  Let&apos;s build your next <span>project together</span>
                 </h2>
                 <p className="wow fadeInUp" data-wow-delay="0.4s">
                   Have an idea or need a dedicated Front-End Developer?
-                  Reach out and let's discuss how I can help you bring your vision to life.
+                  Reach out and let&apos;s discuss how I can help you bring your vision to life.
                 </p>
               </div>
 
@@ -176,7 +177,7 @@ export default function Contact() {
           <div className="col-lg-6">
             <div className="contact-form">
               <p className="wow fadeInUp">
-                Fill out this form and I'll get back to you promptly. I'm excited to discuss your ideas and how I can help!
+                Fill out this form and I&apos;ll get back to you promptly. I&apos;m excited to discuss your ideas and how I can help!
               </p>
 
               <form 

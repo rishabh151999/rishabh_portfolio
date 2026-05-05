@@ -1,46 +1,74 @@
 import React from 'react';
 
+const education = [
+  {
+    school: 'Chandigarh University',
+    degree: 'Master of Computer Applications',
+    year: '2022 - 2024',
+  },
+  {
+    school: 'University of Lucknow',
+    degree: 'Bachelor of Science',
+    year: '2018 - 2021',
+  },
+  {
+    school: 'Riverside Academy College',
+    degree: 'Intermediate',
+    year: '2017 - 2018',
+  },
+  {
+    school: 'St. John Bosco College',
+    degree: 'High School',
+    year: '2015 - 2016',
+  },
+];
+
+const workExperience = [
+  {
+    company: 'Aayan Infotech',
+    role: 'Front-End Developer | React JS',
+    year: 'Feb 2025 - Ongoing',
+  },
+  {
+    company: 'Bito Technologies Pvt. Ltd.',
+    role: 'Web Developer',
+    year: 'Jul 2024 - Jan 2025',
+  },
+  {
+    company: 'CodSoft Pvt. Ltd.',
+    role: 'Web Developer Intern',
+    year: 'Apr 2024 - May 2024',
+  },
+];
+
+const steps = [
+  {
+    title: '1. Discovery and Planning',
+    desc: 'Understand your business requirements, goals, and audience to plan a robust architecture and development strategy.',
+    id: 'workcollapse1',
+    target: '#workcollapse1',
+    expanded: true,
+    delay: '0s',
+  },
+  {
+    title: '2. Design and Development',
+    desc: 'Transform ideas into responsive, high-performance web interfaces with ReactJS, ensuring maintainable and scalable code.',
+    id: 'workcollapse2',
+    target: '#workcollapse2',
+    expanded: false,
+    delay: '0.2s',
+  },
+  {
+    title: '3. Delivery and Support',
+    desc: 'Deploy, test, and provide post-launch support, ensuring smooth handover, training, and future enhancements as needed.',
+    id: 'workcollapse3',
+    target: '#workcollapse3',
+    expanded: false,
+    delay: '0.4s',
+  },
+];
+
 export default function HomeSection6() {
-  const education = [
-    { school: 'Chandigarh University', degree: 'Master of Computer Applications', year: '2022 – 2024' },
-    { school: 'University of Lucknow', degree: 'Bachelor of Science', year: '2018 – 2021' },
-    { school: 'Riverside Academy College', degree: 'Intermediate', year: '2017 – 2018' },
-    { school: 'St. John Bosco College', degree: 'High School', year: '2015 – 2016' },
-  ];
-
-  const workExperience = [
-    { company: 'Aayan Infotech', role: 'Front-End Developer | React JS', year: 'Feb 2025 – Ongoing' },
-    { company: 'Bito Technologies Pvt. Ltd.', role: 'Web Developer', year: 'Jul 2024 – Jan 2025' },
-    { company: 'CodSoft Pvt. Ltd.', role: 'Web Developer Intern', year: 'Apr 2024 – May 2024' },
-  ];
-
-  const steps = [
-    {
-      title: '1. Discovery and Planning',
-      desc: 'Understand your business requirements, goals, and audience to plan a robust architecture and development strategy.',
-      id: 'workcollapse1',
-      target: '#workcollapse1',
-      expanded: true,
-      delay: '0s',
-    },
-    {
-      title: '2. Design and Development',
-      desc: 'Transform ideas into responsive, high-performance web interfaces with ReactJS, ensuring maintainable and scalable code.',
-      id: 'workcollapse2',
-      target: '#workcollapse2',
-      expanded: false,
-      delay: '0.2s',
-    },
-    {
-      title: '3. Delivery and Support',
-      desc: 'Deploy, test, and provide post-launch support, ensuring smooth handover, training, and future enhancements as needed.',
-      id: 'workcollapse3',
-      target: '#workcollapse3',
-      expanded: false,
-      delay: '0.4s',
-    },
-  ];
-
   return (
     <>
       <div className="our-foundation">
@@ -48,7 +76,7 @@ export default function HomeSection6() {
           <div className="row section-row">
             <div className="col-lg-12">
               <div className="section-title section-title-center">
-                <h3 className="wow fadeInUp">Education & Work</h3>
+                <h3 className="wow fadeInUp">Education &amp; Work</h3>
                 <h2 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
                   My journey of learning and <span>professional growth</span>
                 </h2>
@@ -59,13 +87,17 @@ export default function HomeSection6() {
           <div className="row">
             {[
               { title: 'Education', icon: 'icon-foundation-header-1.svg', data: education },
-              { title: 'Work Experience', icon: 'icon-foundation-header-2.svg', data: workExperience },
+              {
+                title: 'Work Experience',
+                icon: 'icon-foundation-header-2.svg',
+                data: workExperience,
+              },
             ].map((section, i) => (
               <div className="col-lg-6" key={i}>
                 <div className="our-foundation-box wow fadeInUp" data-wow-delay={i ? '0.2s' : '0s'}>
                   <div className="foundation-header">
                     <div className="icon-box">
-                      <img src={`images/${section.icon}`} alt={section.title} />
+                      <img src={`/images/${section.icon}`} alt={section.title} />
                     </div>
                     <div className="foundation-header-title">
                       <h3>{section.title}</h3>
@@ -103,7 +135,6 @@ export default function HomeSection6() {
                   />
                 </figure>
               </div>
-
             </div>
 
             <div className="col-lg-6">
@@ -114,8 +145,9 @@ export default function HomeSection6() {
                     A clear process for <span>efficient delivery</span>
                   </h2>
                   <p className="wow fadeInUp" data-wow-delay="0.4s">
-                    Hi, I'm Rishabh — a dedicated Front-End Developer skilled in ReactJS,
-                    committed to transforming ideas into robust, responsive, and user-friendly web applications.
+                    Hi, I&apos;m Rishabh, a dedicated Front-End Developer skilled in
+                    ReactJS, committed to transforming ideas into robust, responsive,
+                    and user-friendly web applications.
                   </p>
                 </div>
 
@@ -147,7 +179,6 @@ export default function HomeSection6() {
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           </div>

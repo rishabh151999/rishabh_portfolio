@@ -1,9 +1,35 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+
+const services = [
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    title: 'React JS Development',
+  },
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    title: 'Responsive Web Design',
+  },
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    title: 'UI/UX Implementation',
+  },
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    title: 'Single Page Applications',
+  },
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    title: 'API Integration',
+  },
+  {
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
+    title: 'Performance Optimization',
+  },
+];
 
 export default function HomeSection2() {
   return (
@@ -22,11 +48,15 @@ export default function HomeSection2() {
             <div className="section-content-btn">
               <div className="section-title-content wow fadeInUp" data-wow-delay="0.4s">
                 <p>
-                  As a dedicated Front-End Developer, I craft modern, responsive, and user-friendly web applications using ReactJS and the latest web technologies.
+                  As a dedicated Front-End Developer, I craft modern, responsive, and
+                  user-friendly web applications using ReactJS and the latest web
+                  technologies.
                 </p>
               </div>
               <div className="section-btn wow fadeInUp" data-wow-delay="0.6s">
-                <Link to="/services" className="btn-default">My Featured Services</Link>
+                <a href="#offerings" className="btn-default">
+                  My Featured Services
+                </a>
               </div>
             </div>
           </div>
@@ -40,53 +70,30 @@ export default function HomeSection2() {
                 spaceBetween={30}
                 slidesPerView={3}
                 pagination={{ clickable: true }}
-                loop={true}
+                loop
                 breakpoints={{
                   320: { slidesPerView: 1 },
                   768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 }
+                  1024: { slidesPerView: 3 },
                 }}
               >
-                {[
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-                    title: 'React JS Development'
-                  },
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-                    title: 'Responsive Web Design'
-                  },
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-                    title: 'UI/UX Implementation'
-                  },
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-                    title: 'Single Page Applications'
-                  },
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-                    title: 'API Integration'
-                  },
-                  {
-                    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
-                    title: 'Performance Optimization'
-                  }
-                ].map((service, index) => (
+                {services.map((service, index) => (
                   <SwiperSlide key={index}>
                     <div className="service-item">
                       <div className="service-item-header">
                         <div className="icon-box">
-                          <img src={`${service.icon}`} alt="" width={40}/>
+                          <img src={service.icon} alt="" width={40} />
                         </div>
                         <div className="service-item-btn">
-                          <Link to="/">
-                            <img src="images/arrow-dark.svg" alt="arrow" />
-                          </Link>
+                          <a href="#home">
+                            <img src="/images/arrow-dark.svg" alt="arrow" />
+                          </a>
                         </div>
                       </div>
                       <div className="service-item-body">
-                        <h3><Link to="/">{service.title}</Link></h3>
+                        <h3>
+                          <a href="#home">{service.title}</a>
+                        </h3>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -98,8 +105,8 @@ export default function HomeSection2() {
           <div className="col-lg-12">
             <div className="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
               <p>
-                Let’s build fast, modern, and engaging web experiences together.{' '}
-                <Link to="/contact">Contact me to get started!</Link>
+                Let&apos;s build fast, modern, and engaging web experiences together.{' '}
+                <a href="#contact">Contact me to get started!</a>
               </p>
             </div>
           </div>

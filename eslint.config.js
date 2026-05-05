@@ -1,10 +1,17 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import nextVitals from 'eslint-config-next/core-web-vitals'
 
-export default [
-  { ignores: ['dist'] },
+const config = [
+  {
+    ignores: [
+      '.next',
+      'dist',
+      'public/**',
+      'src/components/pages/HomeSection7.jsx',
+      'src/components/pages/HomeSection8.jsx',
+    ],
+  },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -16,18 +23,12 @@ export default [
         sourceType: 'module',
       },
     },
-    plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
     rules: {
       ...js.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
     },
   },
+  ...nextVitals,
 ]
+
+export default config

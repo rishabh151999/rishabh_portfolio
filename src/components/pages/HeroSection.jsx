@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -13,10 +15,10 @@ export default function HeroSection() {
               <div className="section-title dark-section">
                 <h3 className="wow fadeInUp">Turning Ideas Into Interactive Experiences</h3>
                 <h1 className="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">
-                  <span>I'm Rishabh, </span> <br />Front-End Developer based in India
+                  <span>I&apos;m Rishabh, </span> <br />Front-End Developer based in India
                 </h1>
                 <p className="wow fadeInUp" data-wow-delay="0.4s">
-                  Hi, I'm Rishabh Chandra, a dedicated Front-End Developer specializing in React JS.
+                  Hi, I&apos;m Rishabh Chandra, a dedicated Front-End Developer specializing in React JS.
                   I build modern, responsive, and user-friendly web applications that help businesses grow and stand out in the digital space.
                 </p>
               </div>
@@ -29,7 +31,7 @@ export default function HeroSection() {
                     duration={500}
                     className="btn-default"
                   >
-                    Let's Connect
+                    Let&apos;s Connect
                   </ScrollLink>
                 </div>
 
