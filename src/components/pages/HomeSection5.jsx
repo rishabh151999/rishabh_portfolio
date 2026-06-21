@@ -3,7 +3,7 @@ import React from 'react';
 export default function HomeSection5() {
   const portfolioItems = [
     {
-      image: 'images/danbro-banner.png',
+      image: 'images/danbro-homepage-clean.png',
       title: 'Danbro by Mr. Brown',
       category: 'Bakery E-Commerce Website',
       url: 'https://danbrobakery.in/',
