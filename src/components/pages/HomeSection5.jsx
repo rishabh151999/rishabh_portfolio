@@ -3,21 +3,21 @@ import React from 'react';
 export default function HomeSection5() {
   const portfolioItems = [
     {
-      image: 'images/portfolio-1.jpg',
-      title: 'Discount Door & Window',
-      category: 'E-Commerce Website',
-      url: 'https://discountdoorandwindow.com/',
+      image: 'images/danbro-banner.png',
+      title: 'Danbro by Mr. Brown',
+      category: 'Bakery E-Commerce Website',
+      url: 'https://danbrobakery.in/',
       delay: '0s',
     },
     {
-      image: 'images/portfolio-2.jpg',
-      title: 'South Walton Carts',
-      category: 'Full Stack Web App',
-      url: 'http://18.209.91.97:8133/',
+      image: 'images/bsip-home.jpg',
+      title: 'BSIP Government Project',
+      category: 'Government Website',
+      url: 'https://bsip.res.in/',
       delay: '0.2s',
     },
     {
-      image: 'images/portfolio-3.jpg',
+      image: 'images/adilience-header.jpg',
       title: 'Adilience Marketing Agency',
       category: 'Corporate Website',
       url: 'https://adilience.com/',

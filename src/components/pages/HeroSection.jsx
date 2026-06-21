@@ -83,7 +83,7 @@ export default function HeroSection() {
 
               {/* Experience Counter Box */}
               <div className="experience-counter-box">
-                <h2><span className="counter">1</span>+</h2>
+                <h2><span className="counter">2</span>+</h2>
                 <p>Years Experience</p>
               </div>
             </div>

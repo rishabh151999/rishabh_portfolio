@@ -35,7 +35,7 @@ export default function HomeSection4() {
                   </div>
                   <div className="facts-counter-item">
                     <h2>
-                      1<span className="counter">+</span> Years
+                      2<span className="counter">+</span> Years
                     </h2>
                     <p>Hands-on professional experience</p>
                   </div>
