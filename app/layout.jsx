@@ -4,16 +4,69 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export const metadata = {
-  title: 'Rishabh Chandra | Front-End Developer in Lucknow',
+  metadataBase: new URL('https://rishabh15aayaninfotech.github.io/rishabh_portfolio'),
+  title: {
+    default: 'Rishabh Chandra Lal | Front-End Developer in Lucknow',
+    template: '%s | Rishabh Chandra Lal',
+  },
   description:
-    'Portfolio of Rishabh Chandra Lal - Front-End Developer in Lucknow, India. Specializing in React JS, responsive web design, and modern user experiences.',
+    'Rishabh Chandra Lal is a Front-End Developer in Lucknow, India, specializing in React, responsive web design, modern UI development, and performance-focused portfolio websites.',
   keywords: [
     'Rishabh Chandra Lal',
     'Front-End Developer Lucknow',
     'React Developer Lucknow',
     'Web Developer Portfolio',
     'Responsive Websites India',
+    'React JS Portfolio',
+    'Frontend Developer India',
   ],
+  alternates: {
+    canonical: '/',
+  },
+  applicationName: 'Rishabh Chandra Lal Portfolio',
+  authors: [{ name: 'Rishabh Chandra Lal' }],
+  creator: 'Rishabh Chandra Lal',
+  publisher: 'Rishabh Chandra Lal',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: '/',
+    siteName: 'Rishabh Chandra Lal Portfolio',
+    title: 'Rishabh Chandra Lal | Front-End Developer in Lucknow',
+    description:
+      'Portfolio of Rishabh Chandra Lal - Front-End Developer focused on React, responsive UI, and modern web experiences.',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Rishabh Chandra Lal Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rishabh Chandra Lal | Front-End Developer in Lucknow',
+    description:
+      'Portfolio of Rishabh Chandra Lal - Front-End Developer focused on React, responsive UI, and modern web experiences.',
+    images: ['/opengraph-image'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/images/favicon.png',
+    shortcut: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 };
 
 const scripts = [
@@ -37,6 +90,43 @@ const scripts = [
   '/js/function.js',
 ];
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Rishabh Chandra Lal',
+  jobTitle: 'Front-End Developer',
+  url: 'https://rishabh15aayaninfotech.github.io/rishabh_portfolio',
+  image: 'https://rishabh15aayaninfotech.github.io/rishabh_portfolio/images/rishabh.png',
+  sameAs: [
+    'https://www.linkedin.com/in/rishabhchandralal/',
+    'https://github.com/rishabh151999',
+    'https://www.instagram.com/rishabh_chandra_15',
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Lucknow',
+    addressRegion: 'Uttar Pradesh',
+    addressCountry: 'IN',
+  },
+  email: 'rishabhchandralal15@gmail.com',
+  telephone: '+919795661093',
+  description:
+    'Front-End Developer specializing in React, responsive user interfaces, and modern web applications.',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Rishabh Chandra Lal Portfolio',
+  url: 'https://rishabh15aayaninfotech.github.io/rishabh_portfolio',
+  description:
+    'Personal portfolio website for Rishabh Chandra Lal, a Front-End Developer based in Lucknow.',
+  author: {
+    '@type': 'Person',
+    name: 'Rishabh Chandra Lal',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -56,6 +146,12 @@ export default function RootLayout({ children }) {
         <link href="/css/magnific-popup.css" rel="stylesheet" />
         <link href="/css/mousecursor.css" rel="stylesheet" />
         <link href="/css/custom.css" rel="stylesheet" media="screen" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([personSchema, websiteSchema]),
+          }}
+        />
       </head>
       <body>
         {children}

@@ -44,7 +44,7 @@ export default function About() {
                     <div className="about-contact-item-content">
                       <p>Email Me At</p>
                       <h3>
-                        <a href="mailto:rishabhchandraofficial@gmail.com">
+                        <a href="mailto:rishabhchandralal15@gmail.com">
                           rishabhchandralal15@gmail.com
                         </a>
                       </h3>
